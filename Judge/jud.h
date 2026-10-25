@@ -20,11 +20,12 @@ private:
     std::vector<MatchEvent> events;
     std::size_t sucnum;
     std::vector<std::unique_ptr<Robot>> rbList;
-protected:
+public:
     judge(const std::vector<MatchEvent> a);
     void registerRobot (std::unique_ptr<Robot> robot);
     Robot* findrb (int id);
-    void event_in();
+    std::size_t successfulEvents() const;
+    void event_out();
     void event_go();
     std::size_t successfulEvents() const;
 };

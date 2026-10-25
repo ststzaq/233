@@ -25,6 +25,8 @@ public:
     virtual ~Robot () = default;
     int hpc () const;
     int hpm () const;
+    std::string namec() const;
+    std::string groupc() const;
     bool isalive () const;
     int takedmg (int dmg);
     int idc();
@@ -35,6 +37,7 @@ public:
 class Infantry : public Robot
 {
 public:
+    using Robot::Robot;
     ~Infantry ();
     int supply();
     std::string typeName () const;
@@ -43,6 +46,7 @@ public:
 class Hero : public Robot
 {
 public:
+    using Robot::Robot;
     ~Hero ();
     int supply ();
     std::string typeName () const;
@@ -51,6 +55,7 @@ public:
 class Sentry : public Robot
 {
 public:
+    using Robot::Robot;
     ~Sentry ();
     int supply ();
     std::string typeName () const;
@@ -59,6 +64,7 @@ public:
 class AerialRobot : public Robot
 {
 public:
+    using Robot::Robot;
     ~AerialRobot ();
     int supply ();
     std::string typeName () const;

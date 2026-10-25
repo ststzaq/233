@@ -17,6 +17,25 @@ int Robot::hpm () const
     return maxhp;
 }
 
+std::string Robot::namec () const
+{
+    return info.name;
+} 
+
+std::string Robot::groupc() const
+{
+    std::string gp;
+    if(info.team == Team::Blue)
+    {
+        gp = "蓝方";
+    }
+    else
+    {
+        gp = "红方";
+    }
+    return gp;
+}
+
 int Robot::idc ()
 {
     return info.num;
@@ -103,7 +122,7 @@ int AerialRobot::supply ()
 
 std::string AerialRobot::typeName () const
 {
-    std::string name = "无人机";
+    std::string name = "空中无人机";
     return name;
 }
 
