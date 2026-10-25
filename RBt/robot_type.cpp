@@ -17,6 +17,11 @@ int Robot::hpm () const
     return maxhp;
 }
 
+int Robot::idc ()
+{
+    return info.num;
+}
+
 bool Robot::isalive () const
 {
     bool alive = true;
@@ -93,19 +98,12 @@ std::string Sentry::typeName () const
 
 int AerialRobot::supply ()
 {
-    int rest = maxhp - hp;
-    int sup = 10;
-    if (rest < sup)
-    {
-        sup = rest;
-    }
-    hp += sup;
-    return sup;
+    return -1;
 }
 
 std::string AerialRobot::typeName () const
 {
-    std::string name = "哨兵";
+    std::string name = "无人机";
     return name;
 }
 

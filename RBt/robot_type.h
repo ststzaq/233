@@ -1,3 +1,6 @@
+#ifndef ROBOT_TYPE.H
+#define ROBOT_TYPE.H
+
 #include <iostream>
 #include <vector>
 
@@ -12,24 +15,19 @@ struct RobotInfo
 
 class Robot
 {
-private:
+protected:
     RobotInfo info;
     int maxhp;
     int hp;
     bool alive;
 public:
-    Robot (RobotInfo in, int hpmax) 
-    {
-        info = in;
-        maxhp = hpmax;
-        hp = hpmax;
-        alive = true;
-    };
+    Robot (RobotInfo in, int hpmax);
     virtual ~Robot () = default;
     int hpc () const;
     int hpm () const;
     bool isalive () const;
     int takedmg (int dmg);
+    int idc();
     virtual int supply () = 0;
     virtual std::string typeName () const = 0;
 };
@@ -65,3 +63,5 @@ public:
     int supply ();
     std::string typeName () const;
 };
+
+#endif
