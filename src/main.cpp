@@ -37,7 +37,7 @@ int main(void)
   tryRegister(std::make_unique<rm::Sentry>(
         rm::RobotInfo{3, "过洞", rm::Team::Blue}));
   tryRegister(std::make_unique<rm::AerialRobot>(
-        rm::RobotInfo{4, "飞机", rm::Team::Blue}));
+        rm::RobotInfo{4, "无人机", rm::Team::Blue}));
 
   tryRegister(std::make_unique<rm::Infantry>(
         rm::RobotInfo{1, "重复编号", rm::Team::Blue}));
