@@ -1,5 +1,5 @@
-#ifndef JUD.H
-#define JUD.H
+#ifndef JUD_H
+#define JUD_H
 
 #include <vector>
 #include<memory>
@@ -27,7 +27,6 @@ public:
     std::size_t successfulEvents() const;
     void event_out();
     void event_go();
-    std::size_t successfulEvents() const;
 };
 
 #endif

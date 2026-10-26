@@ -1,5 +1,5 @@
-#ifndef ROBOT_TYPE.H
-#define ROBOT_TYPE.H
+#ifndef ROBOT_TYPE_H
+#define ROBOT_TYPE_H
 
 #include <iostream>
 #include <vector>
@@ -38,7 +38,7 @@ class Infantry : public Robot
 {
 public:
     using Robot::Robot;
-    ~Infantry ();
+    ~Infantry () = default;
     int supply();
     std::string typeName () const;
 };
@@ -47,7 +47,7 @@ class Hero : public Robot
 {
 public:
     using Robot::Robot;
-    ~Hero ();
+    ~Hero () = default;
     int supply ();
     std::string typeName () const;
 };
@@ -56,7 +56,7 @@ class Sentry : public Robot
 {
 public:
     using Robot::Robot;
-    ~Sentry ();
+    ~Sentry () = default;
     int supply ();
     std::string typeName () const;
 };
@@ -65,7 +65,7 @@ class AerialRobot : public Robot
 {
 public:
     using Robot::Robot;
-    ~AerialRobot ();
+    ~AerialRobot () = default;
     int supply ();
     std::string typeName () const;
 };

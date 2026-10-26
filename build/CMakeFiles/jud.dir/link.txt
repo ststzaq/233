@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\jud.dir/objects.a
+C:\msys64\ucrt64\bin\ar.exe qc CMakeFiles\jud.dir/objects.a @CMakeFiles\jud.dir\objects1.rsp
+C:\msys64\ucrt64\bin\c++.exe -shared -o D:\Code\233\lib\libjud.dll -Wl,--out-implib,D:\Code\233\lib\libjud.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles\jud.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\jud.dir\linkLibs.rsp

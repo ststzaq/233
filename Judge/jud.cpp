@@ -4,7 +4,6 @@ judge::judge(const std::vector<MatchEvent> a)
 {
     events = a;
     sucnum = 0;
-    sucnum = 0;
 }
 
 void judge::registerRobot(std::unique_ptr<Robot> robot)
@@ -47,17 +46,16 @@ void judge::event_go()
 
                 if(i.value <= 0)
                 {
-                    std::invalid_argument("->失败，伤害值必须大于 0");
-                    std::cout << "->失败，伤害值必须大于 0" << std::endl;
+                    throw std::invalid_argument("->失败，伤害值必须大于 0");
                 }
 
                 if(trg == nullptr)
                 {
-                    std::logic_error("->失败，机器人不存在");
+                    throw std::logic_error("->失败，机器人不存在");
                 }
                 else if(trg->isalive() == false)
                 {
-                    std::logic_error("->失败：机器人已退场");
+                    throw std::logic_error("->失败：机器人已退场");
                 }
                 
 
@@ -84,21 +82,18 @@ void judge::event_go()
                 std::cout << "事件 " << ct << "：机器人 " << i.robotId << " 接收补给";
                 if(trg == nullptr)
                 {
-                    std::logic_error("->失败，机器人不存在");
+                    throw std::logic_error("->失败，机器人不存在");
                 }
                 if(trg->isalive() == false)
                 {
-                    std::logic_error("->失败：机器人已退场");
+                    throw std::logic_error("->失败：机器人已退场");
                 }
                 if(trg->typeName() == "空中无人机")
                 {
-                    std::logic_error("->失败：空中机器人不支持地面补给");
+                    throw std::logic_error("->失败：空中机器人不支持地面补给");
                 }
-                else
-                {
-                    sucnum ++;
-                    std::cout << "->成功，实际恢复 " << trg->takedmg(i.value) << " 点，生命值：" << trg->hpc() << "/" << trg->hpm() << std::endl;
-                }
+                sucnum ++;
+                std::cout << "->成功，实际恢复 " << trg->supply() << " 点，生命值：" << trg->hpc() << "/" << trg->hpm() << std::endl;
             }
             catch(const std::exception& inf)
             {
