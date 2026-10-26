@@ -17,6 +17,7 @@ int main()
         {EventType::Supply, 1, 0}
     };
     judge start(events);
+    std::cout << "=== 登记机器人 ===" << std::endl;
     start.registerRobot(
         std::make_unique<Infantry>(RobotInfo{1, "王八", Team::Red}, 100)
     );

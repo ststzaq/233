@@ -13,6 +13,17 @@ void judge::registerRobot(std::unique_ptr<Robot> robot)
         std::cout << "登记失败：机器人编号重复" << std::endl;
         return;
     }
+    std::string alive;
+    if(robot->isalive() == true)
+    {
+        alive = " 正常";
+    }
+    else
+    {
+        alive = "已退场";
+    }
+    std::cout << robot->idc() << " " << robot->groupc() << " " << robot->typeName() << " " << robot->namec() << " " << robot->hpc()
+    << "/" << robot->hpm() << alive << std::endl;
     rbList.push_back (std::move(robot));
 }
 
