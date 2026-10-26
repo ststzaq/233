@@ -98,8 +98,8 @@ main_EXTERNAL_OBJECTS =
 
 D:/Code/233/bin/main.exe: CMakeFiles/main.dir/main.cpp.obj
 D:/Code/233/bin/main.exe: CMakeFiles/main.dir/build.make
-D:/Code/233/bin/main.exe: D:/Code/233/lib/libjud.dll.a
-D:/Code/233/bin/main.exe: D:/Code/233/lib/librbt.dll.a
+D:/Code/233/bin/main.exe: D:/Code/233/bin/libjud.dll.a
+D:/Code/233/bin/main.exe: D:/Code/233/bin/librbt.dll.a
 D:/Code/233/bin/main.exe: CMakeFiles/main.dir/linkLibs.rsp
 D:/Code/233/bin/main.exe: CMakeFiles/main.dir/objects1.rsp
 D:/Code/233/bin/main.exe: CMakeFiles/main.dir/link.txt

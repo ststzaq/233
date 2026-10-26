@@ -1,1 +1,1 @@
- D:/Code/233/lib/libjud.dll.a D:/Code/233/lib/librbt.dll.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+ D:/Code/233/bin/libjud.dll.a D:/Code/233/bin/librbt.dll.a -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
